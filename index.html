@@ -37,6 +37,51 @@ body{line-height:1.5}a:focus-visible,button:focus-visible{outline:3px solid var(
 @media(max-width:900px){.video-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:650px){.video-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.video-gallery .feature{padding:11px 9px}.video-gallery .feature strong{font-size:13px}.video-gallery .video-wrap{width:min(100%,128px)}.video-gallery .video-note{font-size:10px}}
 @media(max-width:360px){.video-gallery{grid-template-columns:1fr}}
+
+/* Versão equilibrada: apresentação enxuta e vídeos em destaque */
+@media(min-width:901px){
+  .video-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+}
+.video-gallery .feature{padding:18px 17px;border-radius:16px}
+.video-gallery .feature strong{font-size:17px;line-height:1.32;min-height:0}
+.video-gallery .feature>p:not(.video-note){font-size:13px;line-height:1.5;margin-top:8px}
+.video-gallery .video-wrap{width:min(100%,190px);margin:13px auto 10px;border-radius:12px}
+.video-gallery .video-wrap.video-wrap-horizontal{width:100%;max-width:290px;aspect-ratio:16/9}
+.video-gallery .video-note{font-size:11px;line-height:1.45}
+/* Reduzir altura antes da galeria sem remover conteúdos */
+#historia.content{padding-top:24px;padding-bottom:22px}
+#historia .eyebrow,#criacoes .eyebrow{margin-bottom:5px}
+#historia h2,#criacoes h2{font-size:clamp(27px,3vw,36px);margin-bottom:11px}
+#historia .story{padding:18px 25px;gap:20px;border-radius:17px}
+#historia .story p{font-size:14px;line-height:1.5}
+#historia .story-aside{padding-left:18px}
+#historia .story-aside strong{font-size:18px;line-height:1.3}
+#historia .story-aside small{margin-top:7px}
+#criacoes.content{padding-top:22px}
+#criacoes>.lead{font-size:14px;line-height:1.5;margin-bottom:10px}
+#criacoes>.grid{margin-top:10px;gap:12px}
+#criacoes>.grid .card{min-height:0;padding:12px 15px;border-radius:14px}
+#criacoes>.grid .card .symbol{display:none}
+#criacoes>.grid .card h3{font-size:17px;margin-bottom:4px}
+#criacoes>.grid .card p{font-size:12px;line-height:1.4}
+#criacoes>.art-gallery-head{margin-top:22px!important;margin-bottom:10px}
+#criacoes>.art-gallery-head h3{font-size:clamp(25px,2.6vw,32px);margin-bottom:5px}
+#criacoes>.art-gallery-head p{font-size:13px;line-height:1.5}
+#criacoes .video-filter{margin:15px 0 9px}
+#criacoes .video-filter button{padding:8px 12px;font-size:12px}
+#criacoes .video-count{font-size:12px;margin-bottom:9px}
+@media(max-width:900px){.video-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){
+ #historia .story{padding:18px;gap:12px}
+ #historia .story-aside{padding:12px 0 0}
+ #criacoes>.grid{grid-template-columns:1fr}
+ .video-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .video-gallery .feature{padding:11px 9px}
+ .video-gallery .feature strong{font-size:13px}
+ .video-gallery .video-wrap{width:min(100%,128px)}
+}
+@media(max-width:360px){.video-gallery{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
