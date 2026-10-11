@@ -24,6 +24,19 @@ body{line-height:1.5}a:focus-visible,button:focus-visible{outline:3px solid var(
 
 /* Molduras horizontais apenas para os três vídeos 16:9 */
 .video-wrap.video-wrap-horizontal{aspect-ratio:16/9;width:min(100%,520px)}
+
+/* Galeria compacta: quatro vídeos por linha no computador */
+.video-gallery{grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;align-items:stretch}
+.video-gallery .feature{padding:14px 12px;border-radius:15px;min-width:0}
+.video-gallery .feature .tag{font-size:9px;margin-bottom:6px;letter-spacing:.09em}
+.video-gallery .feature strong{font-size:15px;line-height:1.3;min-height:2.6em}
+.video-gallery .feature>p:not(.video-note){font-size:12px;line-height:1.45;margin:7px 0 0}
+.video-gallery .video-wrap{width:min(100%,138px);margin:12px auto 9px;border-radius:10px;box-shadow:0 5px 14px #10283c18}
+.video-gallery .video-wrap.video-wrap-horizontal{width:100%;aspect-ratio:16/9}
+.video-gallery .video-note{font-size:10px;line-height:1.35}
+@media(max-width:900px){.video-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:650px){.video-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.video-gallery .feature{padding:11px 9px}.video-gallery .feature strong{font-size:13px}.video-gallery .video-wrap{width:min(100%,128px)}.video-gallery .video-note{font-size:10px}}
+@media(max-width:360px){.video-gallery{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
